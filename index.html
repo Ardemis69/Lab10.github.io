@@ -20,7 +20,7 @@
 			var section = document.querySelector('section');
 
 			/* STEP 3: Store the URL of a JSON file in a variable */
-			var requestURL = "https://raw.githubusercontent.com/Ardemis69/Lab10.github.io/main/js/i-scream.json?token=GHSAT0AAAAAAB3N6QQWG5LIQWYLBYM2UMDGY32YKIA";
+			var requestURL = "https://raw.githubusercontent.com/Ardemis69/Lab10.github.io/main/js/i-scream.json";
 		
 
 			/* STEP 4: Create a new XHR object */
@@ -28,7 +28,7 @@
 			let request = new XMLHttpRequest();
 			
 
-			/* STEP 5: Open a new request using the request() method */
+			/* STEP 5: Open a new request using the request() method */ 
 			request.open("GET",requestURL);
 			
 
@@ -51,7 +51,9 @@
 				//Grab the company name
 				let headerH1 = document.createElement('h1');
 				headerH1.textContent = jsonObj['companyName'];
+				console.log(headerH1);
 				header.appendChild(headerH1);
+				
 
 				//Grab the company location and the established date
 
